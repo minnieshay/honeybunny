@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 100vh;
+    padding-top: 20px; /* Add padding to make space for the top section content */
+    background-color: #2551a3;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: var(--scroll-padding, 5rem);
+}
+
+/* Adjust the positioning of the "Yes" button */
+#yesButton {
+    position: absolute;
+    bottom: 20px; /* Position the button at the bottom with some space */
+    left: 50%; /* Align the button to the center */
+    transform: translateX(-50%); /* Adjust the position to the center */
+    z-index: 1; /* Ensure the button is above other elements */
+}
+
+.header_text {
+    font-family: 'Nunito';
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    position: relative; /* Set position to relative to allow for proper stacking of absolutely positioned elements */
+    z-index: 2; /* Ensure the text is above other elements */
+    
+}
+
+.text {
+    font-family: 'Nunito';
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.buttons {
+    position: absolute;
+    top: 115%; /* Position the buttons below the image */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Ensure the buttons are behind the image */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #022b72;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #063483;
+}
+
+/* Styles for the container that holds the gif.
+This container will use flexbox to center its contents both horizontally and vertically. */
+.gif_container {
+    display: flex;
+    position: relative;
+    text-align: center; /* Center the image horizontally */
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    max-width: 80%; /* Adjust the value as needed to prevent gif cutoff */
+    margin: 20px auto; /* Center the gif container with some margin */
+}
+
+.gif_container img {
+    display: inline-block; /* Ensure the image is displayed as a block element */
+    max-width: 100%; /* Ensure the image scales properly */
+    height: auto;
+    margin-right: 15px;
+}
+
+
+/* Add this CSS to your styles.css file */
+.hidden {
+    display: none;
+}
+
+/* Center the content of the containers */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    position: relative;
+    max-width: 250%; /* Adjust the value as needed */
+    margin: 10px auto; /* Center the container */
+    justify-content: center;
+    z-index: 2; /* Ensure the top section is above other elements */
+}
+
+
+.container.padding-block-600 {
+    box-sizing: border-box;
+    margin-top: 10px; /* Add sufficient padding to prevent cutoff */
+    max-width: 100%;
+    }
+
+
+.section-two.padding-block-600 {
+    max-width: 150%; /* Adjust the value as needed */
+    margin: 50px auto; /* Center the section */
+    padding: 10px; /* Adjust the value as needed */
+    margin-top: 150px;
+}
+
+* {
+    box-sizing: border-box; /* Include padding in the total width */
+}
+
