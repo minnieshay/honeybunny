@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./style/css/styles.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>For My Valentine</title>
+        
+    </head> 
+    <body>
+        <div class="container padding-block-600" id="section1">
+            <div >
+                <h1 class="header_text">Happy Valentine's Day, Eugene!</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.tenor.com/LKz-Ho8lqEYAAAAi/bugcat-bugcatsticker.gif" alt="Cute animated illustration">
+            </div> 
+            
+            <div class="buttons">
+                <button class="btn" id="yesButton">Next</button>
+                <div id="myDIV"></div>
+            </div>
+
+
+            <div class="hidden_images"> <!-- Create a container for the hidden images -->
+                <div class="gif_container hidden">
+                    <img src="https://media.tenor.com/vPmvA8SBaNoAAAAi/capoo-bugcat.gif" alt="Cute animated illustration">
+                </div>
+
+                <div class="gif_container hidden">
+                    <img src="https://media.tenor.com/_miE5FTgfJIAAAAi/bugcat-bugcatsticker.gif" alt="Cute animated illustration">
+                </div>
+
+                <div class="gif_container hidden">
+                    <img src="https://media.tenor.com/x-xfvBmLgDoAAAAi/tkthao219-capoo.gif" alt="Cute animated illustration">
+                </div>
+            </div>
+        </div> 
+
+
+        <script>
+        var textStates = [
+        {
+            text: "Happy Valentine's Day, Eugene!",
+            image: "https://media.tenor.com/LKz-Ho8lqEYAAAAi/bugcat-bugcatsticker.gif"
+        },
+        {
+            text: "You're my cute honey bunny.",
+            image: "https://media.tenor.com/vPmvA8SBaNoAAAAi/capoo-bugcat.gif"
+        },
+        {
+            text: "I love spending time with you and finding new things to love about you.",
+            image: "https://media.tenor.com/_miE5FTgfJIAAAAi/bugcat-bugcatsticker.gif"
+        },
+        {
+            text: "I'm grateful to know and love you.",
+            image: "https://media.tenor.com/x-xfvBmLgDoAAAAi/tkthao219-capoo.gif" 
+        }
+    ];
+    var currentState = 0;
+
+    function clickToFlip() {
+        var x = document.querySelector(".header_text");
+        var img = document.querySelector(".gif_container img");
+        currentState = (currentState + 1) % textStates.length;
+        x.innerHTML = textStates[currentState].text;
+        img.src = textStates[currentState].image;
+        console.log("The clickToFlip function was called");
+    
+        if (currentState > 0) {
+            // Hide the current image
+            document.querySelector('.gif_container img:nth-of-type(' + (currentState) + ')').classList.add('hidden');
+            // Show the next image
+            document.querySelector('.gif_container img:nth-of-type(' + (currentState + 1) + ')').classList.remove('hidden');
+        }
+    }
+    
+    document.getElementById("yesButton").addEventListener("click", clickToFlip);
+        </script>
+    </body> 
+</html>
