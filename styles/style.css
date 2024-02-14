@@ -7,11 +7,6 @@ body {
     background-color: #2551a3;
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding: var(--scroll-padding, 5rem);
-}
-
 /* Adjust the positioning of the "Yes" button */
 #yesButton {
     position: absolute;
@@ -94,7 +89,6 @@ This container will use flexbox to center its contents both horizontally and ver
     margin-right: 15px;
 }
 
-
 /* Add this CSS to your styles.css file */
 .hidden {
     display: none;
@@ -114,20 +108,11 @@ This container will use flexbox to center its contents both horizontally and ver
     z-index: 2; /* Ensure the top section is above other elements */
 }
 
-
 .container.padding-block-600 {
     box-sizing: border-box;
     margin-top: 10px; /* Add sufficient padding to prevent cutoff */
     max-width: 100%;
     }
-
-
-.section-two.padding-block-600 {
-    max-width: 150%; /* Adjust the value as needed */
-    margin: 50px auto; /* Center the section */
-    padding: 10px; /* Adjust the value as needed */
-    margin-top: 150px;
-}
 
 * {
     box-sizing: border-box; /* Include padding in the total width */
